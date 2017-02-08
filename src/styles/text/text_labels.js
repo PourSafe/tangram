@@ -44,6 +44,8 @@ export const TextLabels = {
         this.texts[tile.key] = this.texts[tile.key] || {};
         let sizes = this.texts[tile.key][text_settings_key] = this.texts[tile.key][text_settings_key] || {};
 
+        layout.overflow = context.global.overflow;
+
         // unique text strings, grouped by text drawing style
         if (!sizes[text]) {
             // first label with this text/style/tile combination, make a new label entry
